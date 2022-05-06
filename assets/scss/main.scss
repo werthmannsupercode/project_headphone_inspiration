@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500&display=swap');
+@import '_generals.scss';
+@import '_variables.scss';
+@import '_mixin.scss';
+
+body {
+    background-color: $colorBlack;
+}
+
+header {
+
+    padding: 20px 20px;
+    position: fixed;
+    width: 100%;
+
+    nav {
+        @include flexit;
+
+        ul {
+            @include flexit;
+            list-style: none;
+            width: 45vw;
+
+            li a {
+                text-decoration: none;
+                color: $colorGrey;
+                font-size: 1.4rem;
+            }
+
+            li:nth-of-type(1) {
+                padding: 0 50px;
+            }
+
+            li:nth-of-type(5) {
+                padding: 0 50px;
+            }
+
+            li a:hover {
+                color: $colorRose;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+aside {
+    position: fixed;
+    top: 20vh;
+
+    nav {
+        ul {
+            display: flex;
+            flex-direction: column;
+            color: $colorGrey;
+
+            li i {
+                font-size: 1.8rem;
+                margin: 0 20px 2px 20px;
+
+            }
+
+            li a {
+                text-decoration: none;
+                color: $colorGrey;
+                font-size: 1.4rem;
+                margin-left: 20px;
+            }
+
+            li:hover a {
+                color: $colorWhite;
+            }
+
+            li:hover i {
+                border: 1px solid $colorWhite;
+                border-radius: 50%;
+            }
+
+            div {
+                height: 60px;
+                width: 300px;
+                border-left: 1px solid $colorGrey;
+                margin-left: 28.5px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.about {
+    h1 {
+        padding: 20vh 45vw 20vh 25vw;
+        font-size: 3.5rem;
+        color: $colorRose2;
+        font-weight: 300;
+        letter-spacing: 2px;
+    }
+
+    section {
+        background-image: url('../img/section-about-1.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 90vw;
+        height: 100vh;
+        margin: 0 5vw;
+    }
+
+    article {
+        @include flexit;
+        padding: 20vh 13vw;
+
+        img {
+            width: 50%;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 50%;
+            height: 80vh;
+            padding: 10vh 5vw;
+
+            h2 {
+                font-size: 3.5rem;
+                color: $colorRose2;
+                font-weight: 300;
+                letter-spacing: 2px;
+            }
+
+            p {
+                font-size: 1.6rem;
+                color: $colorGray;
+                letter-spacing: 1px;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+.lounger {
+    section {
+        @include flexit;
+
+        div {
+            width: 50vw;
+            background-image: url('../img/section-voyager.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+        }
+
+        article {
+            width: 50vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 0 5vw;
+            height: 80vh;
+
+            h3 {
+                font-size: 3.5rem;
+                color: $colorRose2;
+                font-weight: 300;
+                letter-spacing: 2px;
+                padding: 10vh 0;
+            }
+
+            p {
+                font-size: 1.6rem;
+                color: $colorGray;
+                letter-spacing: 1px;
+                line-height: 1.5;
+            }
+
+        }
+    }
+}
+
+.experience {
+    section {
+        @include flexit;
+
+        div {
+            width: 55vw;
+            background-image: url('../img/section-experience-1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+        }
+
+        article {
+            width: 45vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 0 5vw;
+            height: 80vh;
+
+            h3 {
+                font-size: 3.5rem;
+                color: $colorRose2;
+                font-weight: 300;
+                letter-spacing: 2px;
+                padding: 10vh 0;
+            }
+
+            p {
+                font-size: 1.6rem;
+                color: $colorGray;
+                letter-spacing: 1px;
+                line-height: 1.5;
+            }
+
+        }
+    }
+}
+
+.inspiration {
+    padding: 0 20vw;
+
+    iframe {
+        padding: 20vh 0;
+        border-style: none;
+    }
+
+    .section1 {
+        h4 {
+            font-size: 2rem;
+            color: $colorRose2;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        h5 {
+            font-size: 3.5rem;
+            color: $colorRose2;
+            font-weight: 300;
+            letter-spacing: 2px;
+            padding: 1vh 0 3vh 0;
+        }
+
+        div {
+            @include flexit;
+            width: 17vw;
+
+            p {
+                border: 1px solid $colorWhite;
+                border-radius: 2px;
+                padding: 5px 10px 5px 10px;
+                color: $colorGrey;
+                font-size: 1.4rem;
+            }
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: $colorGray;
+            letter-spacing: 1px;
+            line-height: 1.5;
+            padding: 3vh 0;
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 30vw 30vw;
+        grid-template-rows: 60vh 60vh;
+        padding: 20vh 0;
+        width: 60vw;
+
+        .bild1 {
+            grid-row: 1/2;
+            grid-column: 1/2;
+            width: 100%;
+        }
+
+        .article1 {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            padding: 10vh 2vw;
+
+            h4 {
+                font-size: 2rem;
+                color: $colorRose2;
+                font-weight: 300;
+                letter-spacing: 2px;
+            }
+
+            h5 {
+                font-size: 3.5rem;
+                color: $colorRose2;
+                font-weight: 300;
+                letter-spacing: 2px;
+                padding: 1vh 0 3vh 0;
+            }
+
+            p {
+                font-size: 1.6rem;
+                color: $colorGray;
+                letter-spacing: 1px;
+                line-height: 1.5;
+                padding: 3vh 0;
+            }
+
+        }
+
+        .article2 {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            padding: 10vh 2vw;
+
+            h4 {
+                font-size: 2rem;
+                color: $colorRose2;
+                font-weight: 300;
+                letter-spacing: 2px;
+            }
+
+            h5 {
+                font-size: 3.5rem;
+                color: $colorRose2;
+                font-weight: 300;
+                letter-spacing: 2px;
+                padding: 1vh 0 3vh 0;
+            }
+
+            p {
+                font-size: 1.6rem;
+                color: $colorGray;
+                letter-spacing: 1px;
+                line-height: 1.5;
+                padding: 3vh 0;
+            }
+        }
+
+        .bild2 {
+            grid-column: 2/3;
+            grid-row: 2/3;
+            width: 100%;
+        }
+    }
+}
+
+.shop {
+    @include flexit;
+
+    div {
+        width: 55vw;
+        background-image: url('../img/section-composition4.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+    }
+
+    article {
+        text-align: center;
+        width: 45vw;
+
+        h6 {
+            font-size: 3.5rem;
+            color: $colorRose2;
+            font-weight: 300;
+            letter-spacing: 2px;
+            padding: 1vh 0 3vh 0;
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: $colorGray;
+            letter-spacing: 1px;
+            line-height: 1.5;
+            padding-bottom: 2vh;
+        }
+
+        button {
+            background-color: $colorRose2;
+            border: none;
+            color: $colorBlack;
+            padding: 10px 20px;
+            border-radius: 2px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+    }
+}
